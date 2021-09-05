@@ -25,6 +25,6 @@ pokemon.sort(key=lambda x: x["type"])
 print("The sorted JSON data based on the value of the type:\n{0}".format(pokemon))
 print('\n')
 
-response = requests.get("http://api.open-notify.org/astros.json")
-print(response)
-print("test")
+query = {'lat':'45', 'lon':'180'}
+response = requests.get('http://api.open-notify.org/iss-pass.json', params=query)
+print(response.json())
